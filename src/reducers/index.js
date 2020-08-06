@@ -1,3 +1,5 @@
+import { ADD_TODO, UPDATE_TODO, DELETE_TODO } from '../actionTypes';
+
 const initialState = {
   todos: [
     { id: 1, task: 'Task 1' },
@@ -7,5 +9,23 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case ADD_TODO:
+      return Object.assign({}, state, { todos: [...state.todos, action.payload] });
+
+    case UPDATE_TODO:
+      return Object.assign({}, state, {
+        todos: state.todos.map(todo =>
+          todo.id === action.payload.id ? action.payload : todo
+        )
+      });
+
+    case DELETE_TODO:
+      return Object.assign(
+        {},
+        { todos: state.todos.filter(todo => todo.id !== action.payload.id) }
+      );
+    default:
+      return state;
+  }
 };
