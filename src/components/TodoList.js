@@ -1,16 +1,17 @@
 import React from 'react';
-import Button from '../components/Button';
 import Todo from '../components/Todo';
+import { connect } from 'react-redux';
 
-const TodoList = () => {
+const mapStateToProps = state => ({ todos: state.todos });
+
+const TodoList = ({ todos }) => {
   return (
     <div className="mt-4">
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
+      {todos.map(todo => (
+        <Todo key={todo.id} id={todo.id} task={todo.task} />
+      ))}
     </div>
   );
 };
 
-export default TodoList;
+export default connect(mapStateToProps)(TodoList);

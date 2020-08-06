@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './components/Button';
 import AddTodo from './components/AddTodo';
 import TodoList from './components/TodoList';
 

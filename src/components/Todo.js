@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from './Button';
 
-const Todo = () => {
+const Todo = ({ id, task }) => {
   return (
     <div class="text-lg px-3 py-3">
-      <p className="inline-block mr-6">Task 1</p>
+      <p className="inline-block mr-6">{task}</p>
       <Button size="sm" textColor="white" bgColor="yellow-500">
         Update
       </Button>

@@ -5,7 +5,7 @@ const AddTodo = () => {
   return (
     <div>
       <input
-        class="border border-gray-300 rounded px-6 py-1 mr-2"
+        className="border border-gray-300 rounded px-6 py-1 mr-2"
         type="text"
         placeholder="Enter your task."
       />
