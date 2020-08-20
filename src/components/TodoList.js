@@ -6,7 +6,7 @@ const mapStateToProps = state => ({ todos: state.todos });
 
 const TodoList = ({ todos }) => {
   return (
-    <div className="mt-4">
+    <div>
       {todos.map(todo => (
         <Todo key={todo.id} id={todo.id} task={todo.task} />
       ))}
