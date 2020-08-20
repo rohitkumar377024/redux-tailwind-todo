@@ -12,7 +12,9 @@ const Todo = ({ id, task, updateTodo, deleteTodo }) => {
     updateTodo({ id, task: todo });
     setTodo('');
   };
+
   const deleteItem = () => deleteTodo({ id });
+
   return (
     <div class="text-lg px-3 py-3">
       <input
