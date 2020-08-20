@@ -8,7 +8,7 @@ const Header = () => {
   const day = moment().format('dddd');
 
   return (
-    <div className="p-4 w-full flex justify-between items-center border border-gray-500">
+    <div className="p-4 w-full flex justify-between items-center">
       <div className="flex">
         <p className="text-4xl">{date}</p>
         <div className="flex flex-col justify-center ml-2">
